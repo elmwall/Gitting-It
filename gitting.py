@@ -140,7 +140,10 @@ print()
 
 if "*" in branchCue:
     branchCue = branchCue[2:]
-toAdd = bDir.branchDict[branchCue]
+if "main" in branchCue or "master" in branchCue:
+    toAdd = "."
+else:
+    toAdd = bDir.branchDict[branchCue]
 
 
 
